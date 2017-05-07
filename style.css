@@ -1,0 +1,373 @@
+/* For mobile phones: */
+
+html, body {
+  height: 100%;
+  margin: 0;
+  font-size: 12px;
+  font-family: 'Open Sans', sans-serif;
+}
+
+section {
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center; 
+	position: fixed;
+	width:100%;
+	top:0;
+	left:0; 
+	
+}
+
+
+/* hero section */
+
+#zero {
+	z-index: 7; 
+	color: #F57360;
+}
+
+
+.content-container .title, .start-of-sentence {
+	font-size: 1.1em;
+}
+
+
+
+section .content-container {
+	width: 75%;
+	z-index: 2;
+}
+
+
+
+#what-is-apprenta {
+	border-bottom: 1px solid #F57360;
+	/*background: blue; */
+	width: 100%;
+	min-height: 1.8em;
+	padding: 20px 0px 0px 0px;
+	font-size: 1.5em;
+	font-weight: bold; 
+}
+
+.content-text {
+	color: #333;
+	width: 100%;
+	min-height: 1.8em;
+	padding: 20px 0px 0px 0px;
+	font-size: 1.2em;
+}
+
+.content {
+	font-size: 2.2em;
+	width: 70%;
+	z-index: 100;
+}
+
+.content .title {
+	font-size: .8em;
+	margin-bottom: 1em;
+}
+
+
+
+#one {
+	opacity: 0;
+	top:0;
+	left:0; 
+	z-index: 10; 
+}
+
+
+#two {
+	background-color: white; 
+	opacity: 0; 
+	position: fixed;
+	width:100%;
+	height: 100%;
+	top:0;
+	left:0; 
+	z-index: 19; 
+}
+
+
+#three {
+	background-color: white; 
+	opacity: 0; 
+	position: fixed;
+	width:100%;
+	height: 100%;
+	top:0;
+	left:0; 
+	z-index: 11; 
+
+
+}
+
+
+
+.letter {
+	position: absolute;
+	font-size: 14em;
+	color: red;
+	line-height: 1;
+}
+
+.pink {
+	color: #F57360;
+}
+
+.blue {
+	color: #58A4B0;
+}
+
+#letter1 {
+	top: 10%;
+	left:-4%;
+}
+
+#letter2 {
+	left:50%;
+	top:24%;
+}
+
+#letter3 {
+	left: 15%;
+	bottom:10%;
+}
+
+#letter4 {
+	left: 45%;
+	bottom:10%;
+}
+
+#letter5 {
+	right: 0%;
+	bottom:10%;
+}
+
+
+
+/* Screen 2 */
+
+	#letter10 {
+		top: -10%;
+		left:-5%;
+	}
+
+	#letter11 {
+		top:-10%;
+		right:30%;
+	}
+
+	#letter12 {
+		right: 10%;
+		bottom:-5%;
+	}
+
+
+
+/* form */
+
+
+form li {
+	list-style: none; 
+}
+
+.work-option {
+	width: 100px;
+	border: 2px solid #58A4B0;
+	padding: 15px 40px;
+	text-align: center; 
+	color: #58A4B0;
+	cursor: pointer; 
+}
+
+
+.selected {
+	background-color: #58A4B0; 
+	color: white;
+}
+
+.form-checkbox {
+	display:none;
+}
+
+
+input[type=text], input[type=email] {
+	border:none;
+	border-bottom: 1px solid black;
+	padding-bottom: 6px;
+}
+
+
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: none;
+}
+
+.form-submit-button {
+	border: 2px solid #58A4B0;
+	padding: 15px 40px;
+	text-align: center; 
+	color: #58A4B0;
+	cursor: pointer; 
+	background-color: #58A4B0; 
+	color: white;
+}
+
+
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: black;
+  font-size: 1.3em;
+}
+::-moz-placeholder { /* Firefox 19+ */
+  color: black;
+  font-size: 1.3em;
+}
+:-ms-input-placeholder { /* IE 10+ */
+  color: black;
+  font-size: 1.3em;
+}
+:-moz-placeholder { /* Firefox 18- */
+  color: black;
+  font-size: 1.3em;
+}
+
+#page-indicator {
+		height: 100px;
+		width: 1px;
+		background-color: #F57360; 
+		position: fixed;
+		top: 90%;
+		left: 20%;
+		z-index: 10; 
+		opacity: 1; 
+}
+
+
+
+
+
+/*****************************************************
+ *  Desktop only 
+ *****************************************************/
+
+
+@media only screen and (min-width: 600px) {
+    /* For desktop: */
+
+    html, body {
+      height: 100%;
+      margin: 0;
+      font-size: 16px;
+    }
+
+    
+
+
+
+	section .content-container {
+		width: 50%;
+	}
+
+	
+
+	.content-container .title, .start-of-sentence {
+		font-size: 1.3em;
+	}
+
+	.content-text {
+		color: #333;
+		min-height: 1.8em;
+		padding: 20px 0px 0px 0px;
+		font-size: 2.2em;
+	}
+
+
+
+	#what-is-apprenta {
+		min-height: 1.8em;
+		padding: 20px 0px 0px 0px;
+		font-size: 2.5em;
+	}
+
+
+	.letter {
+		position: absolute;
+		font-size: 25em;
+		line-height: 1;
+	}
+
+
+	/* Screen 1 */
+
+	#letter1 {
+		top: -17%;
+		left:-4%;
+	}
+
+	#letter2 {
+		left:50%;
+		top:-8%;
+	}
+
+	#letter3 {
+		right: 41%;
+		bottom:-5%;
+	}
+
+	#letter4 {
+		right: 25%;
+		bottom:-5%;
+	}
+
+	#letter5 {
+		right: 2%;
+		bottom:-5%;
+	}
+
+
+	/* Screen 2 */
+
+	#letter10 {
+		top: -10%;
+		left:-5%;
+	}
+
+	#letter11 {
+		top:-17%;
+		right:30%;
+	}
+
+	#letter12 {
+		right: 10%;
+		bottom:-5%;
+	}
+
+
+
+	#page-indicator {
+			height: 200px;
+			width: 2px;
+	}
+
+
+
+	
+	section {
+		min-height: 600px;
+	}
+
+/*
+	#zero-transition-one-bg {
+		background: blue; 
+	}
+*/
+    
+}
+
+
