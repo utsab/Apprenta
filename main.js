@@ -187,10 +187,18 @@
     // // /* 2nd screen with big moving letters fades to white */
 
     var bigLettersMoveOnHowItWorksSection = new TimelineMax();
-    bigLettersMoveOnHowItWorksSection
-        .to($letter10, 1, {top:'-20%', left:'-8%'}, '0')
-        .to($letter12, 1, {bottom:'-40%', right:'35%'}, '0') 
-        .to($letter11, 1, {right:'28%', top:'-20%'}, '0');
+
+    if (isMobile) {
+        bigLettersMoveOnHowItWorksSection
+            .to($letter10, 1, {top:'15%', left:'-12%'}, '0')
+            .to($letter12, 1, {bottom:'0%', right:'30%'}, '0') 
+            .to($letter11, 1, {right:'15%', top:'0%'}, '0');
+    } else {
+        bigLettersMoveOnHowItWorksSection
+            .to($letter10, 1, {top:'-20%', left:'-8%'}, '0')
+            .to($letter12, 1, {bottom:'-35%', right:'30%'}, '0') 
+            .to($letter11, 1, {right:'28%', top:'-20%'}, '0');
+    }
 
     
     new ScrollMagic.Scene( {
@@ -242,6 +250,9 @@
             name:"How it works leaves"
         })
     .loglevel(3);
+
+
+
 
 
 

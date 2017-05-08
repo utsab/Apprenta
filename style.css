@@ -152,18 +152,18 @@ section .content-container {
 /* Screen 2 */
 
 	#letter10 {
-		top: -10%;
+		top: 20%;
 		left:-5%;
 	}
 
 	#letter11 {
-		top:-10%;
+		top:10%;
 		right:30%;
 	}
 
 	#letter12 {
 		right: 10%;
-		bottom:-5%;
+		bottom:15%;
 	}
 
 
