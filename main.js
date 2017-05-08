@@ -18,13 +18,10 @@
         $letter12 = $('#letter12'); 
         $pageIndicator = $('#page-indicator'); 
  
-    // Keep adding code here
 
+    var isMobile = /Mobi/.test(navigator.userAgent); 
 
     $largeBackground.height(wh*10); 
-
-
-
 
     // init
     var ctrl = new ScrollMagic.Controller({
@@ -33,10 +30,6 @@
         }
     });
      
-
-
-    var isMobile = /Mobi/.test(navigator.userAgent); 
-
 
     var transition0 = new TimelineMax();
     transition0
@@ -63,7 +56,7 @@
 
     var pageIndicatorAnimation = new TimelineMax();
     pageIndicatorAnimation
-        .to($pageIndicator, 10, {top:'-20%'}, '0');
+        .to($pageIndicator, 10, {top:'-30%'}, '0');
         // .to($pageIndicator, 4, {opacity: '1', bottom: '-8%'}, '2')
         // .to($sectionOne, 3, {opacity: '1'}, '3'); 
     
@@ -193,19 +186,24 @@
 
     // // /* 2nd screen with big moving letters fades to white */
 
-    var transition3 = new TimelineMax();
-    transition3
-        .to($letter10, 1, {top:'-35%', left:'-8%'}, '1')
-        .to($letter11, 1, {left:'60%', top:'-50%'}, '1')
-        .to($letter12, 1, {bottom:'-25%', right:'0%'}, '1')
-        .to($sectionTwo, 1, {opacity: 0}, '1');
+    var bigLettersMoveOnHowItWorksSection = new TimelineMax();
+    bigLettersMoveOnHowItWorksSection
+        .to($letter10, 1, {top:'-20%', left:'-8%'}, '0')
+        .to($letter12, 1, {bottom:'-40%', right:'35%'}, '0') 
+        .to($letter11, 1, {right:'28%', top:'-20%'}, '0');
 
     
     new ScrollMagic.Scene( {
-          duration: '100%', 
-         offset: wh*5.2
+          duration: '80%', 
+         offset: wh*2.2
     })
-    .setTween(transition3)
+    .addIndicators({
+            colorStart: "rgba(0,0,0,0.5)",
+            colorEnd: "rgba(0,0,0,0.5)", 
+            colorTrigger : "rgba(0,0,0,1)",
+            name:"Big letters move on How-it-works"
+        })
+    .setTween(bigLettersMoveOnHowItWorksSection)
     .addTo(ctrl);
 
 
@@ -222,6 +220,30 @@
     // })
     // .setTween(transition4)
     // .addTo(ctrl);
+
+
+    var leaveHowItWorksSection = new TimelineMax();
+    leaveHowItWorksSection
+        // .to($sectionZero, 3, {opacity: 0}, '0');
+         .to($sectionTwo, 1, {opacity: '0'}, '0'); 
+    
+    new ScrollMagic.Scene( { 
+        // triggerElement: $('#zero-bg')[0], 
+        // duration: '70%'
+        duration: "30%",
+        offset: wh * 2.8
+    })
+    .setTween(leaveHowItWorksSection)
+    .addTo(ctrl)
+    .addIndicators({
+            colorStart: "rgba(0,0,0,0.5)",
+            colorEnd: "rgba(0,0,0,0.5)", 
+            colorTrigger : "rgba(0,0,0,1)",
+            name:"How it works leaves"
+        })
+    .loglevel(3);
+
+
 
 
 
