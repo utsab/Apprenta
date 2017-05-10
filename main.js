@@ -211,19 +211,6 @@
     .addTo(ctrl);
 
 
-    // // /* 3rd screen (form) fades in */
-
-    // var transition4 = new TimelineMax();
-    // transition4
-    //     .to($sectionThree, 1, {opacity: 1}, '1');
-
-    
-    // new ScrollMagic.Scene( {
-    //     duration: '50%', 
-    //     offset: wh*4 
-    // })
-    // .setTween(transition4)
-    // .addTo(ctrl);
 
 
     var leaveHowItWorksSection = new TimelineMax();
@@ -240,6 +227,19 @@
     .setTween(leaveHowItWorksSection)
     .addTo(ctrl); 
     
+    // /* 3rd screen (form) fades in */
+
+    var enterForm = new TimelineMax();
+    enterForm
+        .to($sectionThree, 1, {opacity: 1}, '1');
+
+    
+    new ScrollMagic.Scene( {
+        duration: '50%', 
+        offset: wh*3.1 
+    })
+    .setTween(enterForm)
+    .addTo(ctrl);
  
 
 
