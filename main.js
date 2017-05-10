@@ -44,14 +44,13 @@
         offset: 0
     })
     .setTween(transition0)
-    .addTo(ctrl)
-    .addIndicators({
-            colorStart: "rgba(0,0,0,0.5)",
-            colorEnd: "rgba(0,0,0,0.5)", 
-            colorTrigger : "rgba(0,0,0,1)",
-            name:name
-        })
-    .loglevel(3);
+    .addTo(ctrl);
+    // .addIndicators({
+    //         colorStart: "rgba(0,0,0,0.5)",
+    //         colorEnd: "rgba(0,0,0,0.5)", 
+    //         colorTrigger : "rgba(0,0,0,1)",
+    //         name:name
+    //     });
 
 
     var pageIndicatorAnimation = new TimelineMax();
@@ -67,14 +66,13 @@
         offset: 0
     })
     .setTween(pageIndicatorAnimation)
-    .addTo(ctrl)
-    .addIndicators({
-            colorStart: "rgba(0,0,0,0.5)",
-            colorEnd: "rgba(0,0,0,0.5)", 
-            colorTrigger : "rgba(0,0,0,1)",
-            name:"pageIndicatorAnimation"
-        })
-    .loglevel(3);
+    .addTo(ctrl);
+    // .addIndicators({
+    //         colorStart: "rgba(0,0,0,0.5)",
+    //         colorEnd: "rgba(0,0,0,0.5)", 
+    //         colorTrigger : "rgba(0,0,0,1)",
+    //         name:"pageIndicatorAnimation"
+    //     });
 
 
 
@@ -90,14 +88,13 @@
         offset: wh * .7
     })
     .setTween(enterBigLetterScreen1)
-    .addTo(ctrl)
-    .addIndicators({
-            colorStart: "rgba(0,0,0,0.5)",
-            colorEnd: "rgba(0,0,0,0.5)", 
-            colorTrigger : "rgba(0,0,0,1)",
-            name:"Enter first big letters"
-        })
-    .loglevel(3);
+    .addTo(ctrl);
+    // .addIndicators({
+    //         colorStart: "rgba(0,0,0,0.5)",
+    //         colorEnd: "rgba(0,0,0,0.5)", 
+    //         colorTrigger : "rgba(0,0,0,1)",
+    //         name:"Enter first big letters"
+    //     });
 
 
 
@@ -127,12 +124,12 @@
         // triggerElement: $('#one-bg')[0], 
         duration: '80%'
     })
-    .addIndicators({
-            colorStart: "rgba(0,0,0,0.5)",
-            colorEnd: "rgba(0,0,0,0.5)", 
-            colorTrigger : "rgba(0,0,0,1)",
-            name:"Big letters move 1"
-        })
+    // .addIndicators({
+    //         colorStart: "rgba(0,0,0,0.5)",
+    //         colorEnd: "rgba(0,0,0,0.5)", 
+    //         colorTrigger : "rgba(0,0,0,1)",
+    //         name:"Big letters move 1"
+    //     })
     .setTween(bigLettersMove)
     .addTo(ctrl);
 
@@ -150,14 +147,13 @@
         offset: wh * 1.6
     })
     .setTween(leaveBigLetterScreen1)
-    .addTo(ctrl)
-    .addIndicators({
-            colorStart: "rgba(0,0,0,0.5)",
-            colorEnd: "rgba(0,0,0,0.5)", 
-            colorTrigger : "rgba(0,0,0,1)",
-            name:"Big letters screen 1 leaves"
-        })
-    .loglevel(3);
+    .addTo(ctrl);
+    // .addIndicators({
+    //         colorStart: "rgba(0,0,0,0.5)",
+    //         colorEnd: "rgba(0,0,0,0.5)", 
+    //         colorTrigger : "rgba(0,0,0,1)",
+    //         name:"Big letters screen 1 leaves"
+    //     });
 
 
 
@@ -173,12 +169,12 @@
          duration: '30%', 
          offset: wh * 1.9
     })
-    .addIndicators({
-            colorStart: "rgba(0,0,0,0.5)",
-            colorEnd: "rgba(0,0,0,0.5)", 
-            colorTrigger : "rgba(0,0,0,1)",
-            name:"Enter big letters 2"
-        })
+    // .addIndicators({
+    //         colorStart: "rgba(0,0,0,0.5)",
+    //         colorEnd: "rgba(0,0,0,0.5)", 
+    //         colorTrigger : "rgba(0,0,0,1)",
+    //         name:"Enter big letters 2"
+    //     })
     .setTween(enterBigLetters2)
     .addTo(ctrl);
 
@@ -205,12 +201,12 @@
           duration: '80%', 
          offset: wh*2.2
     })
-    .addIndicators({
-            colorStart: "rgba(0,0,0,0.5)",
-            colorEnd: "rgba(0,0,0,0.5)", 
-            colorTrigger : "rgba(0,0,0,1)",
-            name:"Big letters move on How-it-works"
-        })
+    // .addIndicators({
+    //         colorStart: "rgba(0,0,0,0.5)",
+    //         colorEnd: "rgba(0,0,0,0.5)", 
+    //         colorTrigger : "rgba(0,0,0,1)",
+    //         name:"Big letters move on How-it-works"
+    //     })
     .setTween(bigLettersMoveOnHowItWorksSection)
     .addTo(ctrl);
 
@@ -242,15 +238,9 @@
         offset: wh * 2.8
     })
     .setTween(leaveHowItWorksSection)
-    .addTo(ctrl)
-    .addIndicators({
-            colorStart: "rgba(0,0,0,0.5)",
-            colorEnd: "rgba(0,0,0,0.5)", 
-            colorTrigger : "rgba(0,0,0,1)",
-            name:"How it works leaves"
-        })
-    .loglevel(3);
-
+    .addTo(ctrl); 
+    
+ 
 
 
 
