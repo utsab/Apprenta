@@ -26,6 +26,7 @@
 
 
    $(".work-option").click(function(e) {
+
       var workOptionID = e.target.id; 
       var jotFormCheckboxID = jotFormMappings[workOptionID]; 
       var $jotFormCheckboxElement = $(jotFormCheckboxID); 
