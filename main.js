@@ -21,7 +21,7 @@
 
     var isMobile = /Mobi/.test(navigator.userAgent); 
 
-    $largeBackground.height(wh*10); 
+    $largeBackground.height(wh*3.4); 
 
     // init
     var ctrl = new ScrollMagic.Controller({
@@ -227,20 +227,25 @@
     .setTween(leaveHowItWorksSection)
     .addTo(ctrl); 
     
-    // /* 3rd screen (form) fades in */
+    /* 3rd screen (form) fades in */
 
     var enterForm = new TimelineMax();
     enterForm
-        .to($sectionThree, 1, {opacity: 1}, '1');
+        .to($sectionThree, 1, {opacity: 1}, '0');
 
     
-    new ScrollMagic.Scene( {
-        duration: '50%', 
-        offset: wh*3.1 
-    })
-    .setTween(enterForm)
-    .addTo(ctrl);
  
+
+    // $("section").each(function() {
+       
+        new ScrollMagic.Scene({
+            triggerElement: $sectionThree[0],
+            duration: '50%'
+        })
+        .setPin($sectionThree[0])
+         .setTween(enterForm)
+        .addTo(ctrl);
+    // });
 
 
 
