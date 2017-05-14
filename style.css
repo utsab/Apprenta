@@ -181,7 +181,6 @@ form li {
 }
 
 .work-option {
-	width: 100px;
 	border: 2px solid #58A4B0;
 	padding: 15px 40px;
 	text-align: center; 
@@ -195,7 +194,7 @@ form li {
 	color: white;
 }
 
-.form-checkbox {
+.form-checkbox-item {
 	display:none;
 }
 
