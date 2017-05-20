@@ -20,6 +20,12 @@ html, body {
 }
 
 
+
+.hide-on-mobile {
+	display:none;
+}
+
+
 /* hero section */
 
 #zero {
@@ -214,7 +220,6 @@ button:focus {
 
 
 
-
 .form-submit-button {
 	border: 2px solid #58A4B0;
 	padding: 15px 85px;
@@ -328,7 +333,6 @@ input[type=text], input[type=email] {
 
 
 
-
 /*****************************************************
  *  Desktop only 
  *****************************************************/
@@ -345,6 +349,9 @@ input[type=text], input[type=email] {
 
     
 
+    .hide-on-mobile {
+    	display:inline;
+    }
 
 
 	section .content-container {
