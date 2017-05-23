@@ -4,6 +4,7 @@
         $sectionOne = $('#one'),
         $sectionTwo = $('#two'),
         $sectionThree = $('#three'),
+        $whoWeAreTextContainer = $('#one .content-container'), 
         $largeBackground = $('#large-background'),
         $wordOne = $('#word-1'),
         $wordTwo = $('#word-2'),
@@ -21,7 +22,7 @@
 
     var isMobile = /Mobi/.test(navigator.userAgent); 
 
-    $largeBackground.height(wh*3.4); 
+    $largeBackground.height(wh*5.1); 
 
     // init
     var ctrl = new ScrollMagic.Controller({
@@ -33,14 +34,14 @@
 
     var transition0 = new TimelineMax();
     transition0
-        .to($sectionZero, 3, {opacity: 0}, '0')
+        .to($sectionZero, 1, {opacity: 0}, '0')
         // .to($pageIndicator, 4, {opacity: '1', bottom: '-8%'}, '2')
         // .to($sectionOne, 3, {opacity: '1'}, '3'); 
     
     new ScrollMagic.Scene( { 
         // triggerElement: $('#zero-bg')[0], 
         // duration: '70%'
-        duration: "70%",
+        duration: isMobile ? "20%" : "40%",
         offset: 0
     })
     .setTween(transition0)
@@ -55,14 +56,14 @@
 
     var pageIndicatorAnimation = new TimelineMax();
     pageIndicatorAnimation
-        .to($pageIndicator, 10, {top:'-30%'}, '0');
+        .to($pageIndicator, 10, {top:'-50%'}, '0');
         // .to($pageIndicator, 4, {opacity: '1', bottom: '-8%'}, '2')
         // .to($sectionOne, 3, {opacity: '1'}, '3'); 
     
     new ScrollMagic.Scene( { 
         // triggerElement: $('#zero-bg')[0], 
         // duration: '70%'
-        duration: "260%",
+        duration: "420%",
         offset: 0
     })
     .setTween(pageIndicatorAnimation)
@@ -84,17 +85,13 @@
     new ScrollMagic.Scene( { 
         // triggerElement: $('#zero-bg')[0], 
         // duration: '70%'
-        duration: "50%",
-        offset: wh * .7
+        duration: isMobile ? "20%" : "50%",
+        offset: isMobile ? wh * .4 :  wh * 1.0
     })
     .setTween(enterBigLetterScreen1)
     .addTo(ctrl);
-    // .addIndicators({
-    //         colorStart: "rgba(0,0,0,0.5)",
-    //         colorEnd: "rgba(0,0,0,0.5)", 
-    //         colorTrigger : "rgba(0,0,0,1)",
-    //         name:"Enter first big letters"
-    //     });
+
+
 
 
 
@@ -104,35 +101,44 @@
 
     if (isMobile) {
         bigLettersMove
-            .to($letter1, 4, {top:'7%', left:'-5%', ease: Linear.easeNone})
-            .to($letter2, 4, {left:'60%', top:'7%'}, '0')
-            .to($letter3, 4, {bottom:'0%', left:'10%', ease: Linear.easeNone}, '0')
-            .to($letter4, 4, {bottom:'-5%'}, '0')
-            .to($letter5, 4, {bottom:'4%', right:'-3%', ease: Linear.easeNone}, '0');
+            .to($letter1, 4, {top:'0%', left:'-25%', ease: Power2.easeIn})
+            .to($letter2, 4, {left:'140%', top:'-27%', ease: Power2.easeIn}, '0')
+            .to($letter3, 4, {bottom:'-10%', left:'-30%', ease: Power2.easeIn}, '0')
+            .to($letter4, 4, {bottom:'-20%', ease: Power2.easeIn}, '0')
+            .to($letter5, 4, {bottom:'4%', right:'-25%', ease: Power2.easeIn}, '0');
             // .to($sectionOne, 4, {opacity: 0}, '1');
     } else {
         bigLettersMove
-            .to($letter1, 4, {top:'-18%', left:'-5%', ease: Linear.easeNone})
-            .to($letter2, 4, {left:'60%', top:'-30%'}, '0')
-            .to($letter3, 4, {bottom:'-25%', left:'10%', ease: Linear.easeNone}, '0')
-            .to($letter4, 4, {bottom:'-8%'}, '0')
-            .to($letter5, 4, {bottom:'-7%', right:'-3%', ease: Linear.easeNone}, '0');
+            .to($letter1, 4, {top:'-40%', left:'-30%', ease: Power2.easeIn})
+            .to($letter2, 4, {left:'100%', top:'-140%', ease: Power2.easeIn}, '0')
+            .to($letter3, 4, {bottom:'-75%', left:'30%', ease: Power2.easeIn}, '0')
+            .to($letter4, 4, {bottom:'-45%', ease: Power2.easeIn}, '0')
+            .to($letter5, 4, {bottom:'-40%', right:'-26%', ease: Power2.easeIn}, '0');
     }
     
     new ScrollMagic.Scene( {
-         offset: wh*.9,
+         offset: isMobile ? wh * .5 : wh*1.2,
         // triggerElement: $('#one-bg')[0], 
-        duration: '80%'
+        duration: isMobile ? '30%' : '170%'
     })
-    // .addIndicators({
-    //         colorStart: "rgba(0,0,0,0.5)",
-    //         colorEnd: "rgba(0,0,0,0.5)", 
-    //         colorTrigger : "rgba(0,0,0,1)",
-    //         name:"Big letters move 1"
-    //     })
     .setTween(bigLettersMove)
     .addTo(ctrl);
 
+
+
+    var enterWhoWeAreText = new TimelineMax();
+    enterWhoWeAreText
+        // .to($sectionZero, 3, {opacity: 0}, '0');
+         .to($whoWeAreTextContainer, 1, {opacity: '1'}, '0'); 
+    
+    new ScrollMagic.Scene( { 
+        // triggerElement: $('#zero-bg')[0], 
+        // duration: '70%'
+        duration: isMobile ? "20%": "40%",
+        offset: isMobile ? wh * .8 : wh * 2.6
+    })
+    .setTween(enterWhoWeAreText)
+    .addTo(ctrl);
 
 
     var leaveBigLetterScreen1 = new TimelineMax();
@@ -143,8 +149,8 @@
     new ScrollMagic.Scene( { 
         // triggerElement: $('#zero-bg')[0], 
         // duration: '70%'
-        duration: "30%",
-        offset: wh * 1.6
+        duration: "40%",
+        offset: wh * 3.1
     })
     .setTween(leaveBigLetterScreen1)
     .addTo(ctrl);
@@ -158,7 +164,7 @@
 
 
 
-    // // /* Line moving up screen fades to white */
+    // // // /* Line moving up screen fades to white */
 
     var enterBigLetters2 = new TimelineMax();
     enterBigLetters2
@@ -167,7 +173,7 @@
     
     new ScrollMagic.Scene( {
          duration: '30%', 
-         offset: wh * 1.9
+         offset: wh * 3.6
     })
     // .addIndicators({
     //         colorStart: "rgba(0,0,0,0.5)",
@@ -180,7 +186,7 @@
 
 
 
-    // // /* 2nd screen with big moving letters fades to white */
+    // // // /* 2nd screen with big moving letters fades to white */
 
     var bigLettersMoveOnHowItWorksSection = new TimelineMax();
 
@@ -191,15 +197,15 @@
             .to($letter11, 1, {right:'15%', top:'0%'}, '0');
     } else {
         bigLettersMoveOnHowItWorksSection
-            .to($letter10, 1, {top:'-20%', left:'-8%'}, '0')
-            .to($letter12, 1, {bottom:'-35%', right:'30%'}, '0') 
-            .to($letter11, 1, {right:'28%', top:'-20%'}, '0');
+            .to($letter10, 1, {top:'-20%', left:'-8%', ease: Power2.easeIn}, '0')
+            .to($letter12, 1, {bottom:'-35%', right:'30%', ease: Power2.easeIn}, '0') 
+            .to($letter11, 1, {right:'28%', top:'-20%', ease: Power2.easeIn}, '0');
     }
 
     
     new ScrollMagic.Scene( {
           duration: '80%', 
-         offset: wh*2.2
+         offset: wh*3.9
     })
     // .addIndicators({
     //         colorStart: "rgba(0,0,0,0.5)",
@@ -222,7 +228,7 @@
         // triggerElement: $('#zero-bg')[0], 
         // duration: '70%'
         duration: "30%",
-        offset: wh * 2.8
+        offset: wh * 4.7
     })
     .setTween(leaveHowItWorksSection)
     .addTo(ctrl); 
@@ -236,7 +242,6 @@
     
  
 
-    // $("section").each(function() {
        
         new ScrollMagic.Scene({
             triggerElement: $sectionThree[0],
@@ -245,7 +250,7 @@
         .setPin($sectionThree[0])
          .setTween(enterForm)
         .addTo(ctrl);
-    // });
+
 
 
 

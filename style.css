@@ -85,6 +85,10 @@ section .content-container {
 	z-index: 10; 
 }
 
+#one .content-container {
+	opacity: 0; 
+}
+
 
 #two {
 	background-color: white; 
@@ -320,7 +324,7 @@ input[type=text], input[type=email] {
 }
 
 #page-indicator {
-		height: 100px;
+		height: 45%;
 		width: 1px;
 		background-color: #F57360; 
 		position: fixed;
@@ -435,7 +439,6 @@ input[type=text], input[type=email] {
 
 
 	#page-indicator {
-			height: 200px;
 			width: 2px;
 	}
 
