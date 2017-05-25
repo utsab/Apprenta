@@ -58,7 +58,7 @@
 
         setTimeout(function() {
             myCursor.setIsBlinking(false); // don't let cursor blink when we're typing letters on screen.  
-            showWordsInterval = setInterval(showNextLetter, 100);
+            showWordsInterval = setInterval(showNextLetter, 66);
         }, 1000)
     }); 
 

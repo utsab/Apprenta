@@ -22,7 +22,7 @@
 
     var isMobile = /Mobi/.test(navigator.userAgent); 
 
-    $largeBackground.height(wh*5.1); 
+    $largeBackground.height(wh*6.1); 
 
     // init
     var ctrl = new ScrollMagic.Controller({
@@ -63,7 +63,7 @@
     new ScrollMagic.Scene( { 
         // triggerElement: $('#zero-bg')[0], 
         // duration: '70%'
-        duration: "420%",
+        duration: "520%",
         offset: 0
     })
     .setTween(pageIndicatorAnimation)
@@ -150,7 +150,7 @@
         // triggerElement: $('#zero-bg')[0], 
         // duration: '70%'
         duration: "40%",
-        offset: wh * 3.1
+        offset: wh * 4.1
     })
     .setTween(leaveBigLetterScreen1)
     .addTo(ctrl);
@@ -173,7 +173,7 @@
     
     new ScrollMagic.Scene( {
          duration: '30%', 
-         offset: wh * 3.6
+         offset: wh * 4.6
     })
     // .addIndicators({
     //         colorStart: "rgba(0,0,0,0.5)",
@@ -205,7 +205,7 @@
     
     new ScrollMagic.Scene( {
           duration: '80%', 
-         offset: wh*3.9
+         offset: wh*4.9
     })
     // .addIndicators({
     //         colorStart: "rgba(0,0,0,0.5)",
@@ -228,7 +228,7 @@
         // triggerElement: $('#zero-bg')[0], 
         // duration: '70%'
         duration: "30%",
-        offset: wh * 4.7
+        offset: wh * 5.7
     })
     .setTween(leaveHowItWorksSection)
     .addTo(ctrl); 

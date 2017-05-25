@@ -5,6 +5,7 @@ html, body {
   margin: 0;
   font-size: 12px;
   font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
 }
 
 #zero, #one, #two {
@@ -265,6 +266,7 @@ button:focus {
 #three .form-title {
 	font-size: 2.7em;
 	color: #58A4B0;
+	font-weight: 700; 
 }
 
 .jotform-form {
@@ -387,7 +389,7 @@ input[type=text], input[type=email] {
 
 	.letter {
 		position: absolute;
-		font-size: 23em;
+		font-size: 22em;
 		line-height: 1;
 	}
 
@@ -428,7 +430,7 @@ input[type=text], input[type=email] {
 	}
 
 	#letter11 {
-		top:-17%;
+		top:-8%;
 		right:30%;
 	}
 
