@@ -199,7 +199,7 @@
         bigLettersMoveOnHowItWorksSection
             .to($letter10, 1, {top:'-20%', left:'-8%', ease: Power2.easeIn}, '0')
             .to($letter12, 1, {bottom:'-35%', right:'30%', ease: Power2.easeIn}, '0') 
-            .to($letter11, 1, {right:'28%', top:'-20%', ease: Power2.easeIn}, '0');
+            .to($letter11, 1, {right:'22%', top:'-15%', ease: Power2.easeIn}, '0');
     }
 
     
